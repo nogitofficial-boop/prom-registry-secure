@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IITD Prom Registry</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>💌 Prom Registry</h1>
+    <p>Fill your details below. We’ll do random matching later and email you your match. 🕺💃</p>
+
+    <form method="POST" action="/submit" class="form">
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" maxlength="100" required />
+      </label>
+
+      <label>
+        <span>Instagram ID</span>
+        <div class="with-prefix">
+          <span class="prefix">@</span>
+          <input type="text" name="instagram" maxlength="100" placeholder="username" required />
+        </div>
+      </label>
+
+      <label>
+        <span>Entry Number</span>
+        <input type="text" name="entry_number" maxlength="32" placeholder="eg. 2023XYZ1234" required />
+      </label>
+
+      <label>
+        <span>Gender</span>
+        <select name="gender" required>
+          <option value="" disabled selected>Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Non-binary</option>
+          <option>Prefer not to say</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+      <small>Data is stored encrypted at rest. Only the organizer can export.</small>
+    </footer>
+  </div>
+</body>
+</html>
